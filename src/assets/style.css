@@ -1,0 +1,173 @@
+/* 공통 */
+body {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px 0;
+}
+
+.section-wrapper {
+  max-width: 960px;
+  margin: 0 auto 120px auto;
+  padding: 0 20px;
+  scroll-margin-top: 100px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Navbar */
+.navbar {
+  font-size: 15px;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #4070f4;
+}
+
+/* Intro */
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  min-height: 100vh;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.intro-text {
+  max-width: 480px;
+}
+
+.intro-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.intro-sub {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.intro-role {
+  font-size: 18px;
+  color: gray;
+}
+
+.highlight {
+  color: #4070f4;
+  font-weight: 700;
+}
+
+.intro-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Projects */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.project-card {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.project-image {
+  width: 320px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4070f4;
+}
+
+.project-duration {
+  font-size: 14px;
+  color: #999;
+}
+
+.project-description {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.project-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.project-icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-icons span {
+  background: #f4f4f4;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
