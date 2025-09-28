@@ -1,8 +1,24 @@
+import mailIcon from "../assets/images/mail.png";
+import githubIcon from "../assets/images/github.png";
+import velogIcon from "../assets/images/velog.png";
+
 const Contact = () => {
   const contacts = [
-    { icon: "📧", text: "Email: yourmail@example.com" },
-    { icon: "💻", text: "GitHub: github.com/username" },
-    { icon: "📝", text: "Blog: blog.example.com" },
+    {
+      icon: mailIcon,
+      text: "dbwlsdid1114@naver.com",
+      link: "mailto:dbwlsdid1114@naver.com",
+    },
+    {
+      icon: githubIcon,
+      text: "github.com/uxxin",
+      link: "https://github.com/uxxin",
+    },
+    {
+      icon: velogIcon,
+      text: "velog.io/@uxxin2da/posts",
+      link: "https://velog.io/@uxxin2da/posts",
+    },
   ];
 
   return (
@@ -18,30 +34,38 @@ const Contact = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-          alignItems: "center",
+          justifyContent: "center",
+          gap: "2rem",
+          flexWrap: "wrap",
         }}
       >
         {contacts.map((c) => (
-          <div
+          <a
             key={c.text}
+            href={c.link}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
-              gap: "0.5rem",
               background: "#ffffff",
-              padding: "0.5rem 1.2rem",
-              borderRadius: "8px",
-              minWidth: "250px",
-              justifyContent: "center",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              padding: "1rem",
+              borderRadius: "12px",
+              width: "200px",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+              textDecoration: "none",
+              color: "inherit",
               transition: "transform 0.2s",
             }}
           >
-            <span style={{ fontSize: "1.2rem" }}>{c.icon}</span>
+            <img
+              src={c.icon}
+              alt={c.text}
+              style={{ width: "40px", height: "40px", marginBottom: "0.5rem" }}
+            />
             <span style={{ fontSize: "1rem" }}>{c.text}</span>
-          </div>
+          </a>
         ))}
       </div>
     </section>
