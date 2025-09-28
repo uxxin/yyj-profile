@@ -1,66 +1,49 @@
+import React from "react";
+import { FaJava, FaReact, FaFigma } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiCplusplus,
+} from "react-icons/si";
+import "./Skills.css";
+
 const Skills = () => {
   const skillsData = [
-    { title: "Languages", items: ["JavaScript", "TypeScript", "C++", "Java"] },
-    { title: "Frontend", items: ["React", "TailwindCSS"] },
-    { title: "Design", items: ["Figma"] },
+    {
+      title: "Languages",
+      items: [
+        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
+        { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+        { name: "Java", icon: <FaJava color="#007396" /> },
+        { name: "C++", icon: <SiCplusplus color="#00599C" /> },
+      ],
+    },
+    {
+      title: "Frontend",
+      items: [
+        { name: "React", icon: <FaReact color="#61DAFB" /> },
+        { name: "TailwindCSS", icon: <SiTailwindcss color="#06B6D4" /> },
+      ],
+    },
+    {
+      title: "Design",
+      items: [{ name: "Figma", icon: <FaFigma color="#F24E1E" /> }],
+    },
   ];
 
   return (
-    <section id="skills" style={{ padding: "4rem 2rem", background: "#fff" }}>
-      <h2
-        style={{ fontSize: "2rem", marginBottom: "2rem", textAlign: "center" }}
-      >
-        Skills
-      </h2>
-      <div
-        style={{
-          display: "flex",
-          gap: "3rem",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
+    <section id="skills" className="skills-section">
+      <h2 className="skills-title">Skills</h2>
+      <div className="skills-container">
         {skillsData.map((skill) => (
-          <div
-            key={skill.title}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              minWidth: "150px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "1.25rem",
-                marginBottom: "1rem",
-                textAlign: "center",
-              }}
-            >
-              {skill.title}
-            </h3>
-            <ul
-              style={{
-                listStyle: "none",
-                padding: 0,
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-                alignItems: "center",
-              }}
-            >
+          <div key={skill.title} className="skill-card">
+            <h3 className="skill-card-title">{skill.title}</h3>
+            <ul className="skill-list">
               {skill.items.map((item) => (
-                <li
-                  key={item}
-                  style={{
-                    background: "#e0e7ff",
-                    padding: "0.3rem 0.6rem",
-                    borderRadius: "6px",
-                    fontSize: "0.95rem",
-                    textAlign: "center",
-                  }}
-                >
-                  {item}
+                <li key={item.name} className="skill-item">
+                  <span className="skill-icon">{item.icon}</span>
+                  <span className="skill-name">{item.name}</span>
                 </li>
               ))}
             </ul>

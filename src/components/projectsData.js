@@ -35,6 +35,16 @@ const projectsData = [
     icons: ["React", "TypeScript", "Figma"],
     github: "https://github.com/yourusername/umcnetworking",
   },
+  {
+    id: 4,
+    title: "다양한 영상열화를 개선하는 딥러닝 파운데이션 모델 개발",
+    duration: "2024.07 ~ 2024.12",
+    description: "간단 설명",
+    details: "졸프 설명",
+    img: null,
+    icons: ["AI", "Python"],
+    github: "https://github.com/yourusername/umcnetworking",
+  },
 ];
 
 export default projectsData;

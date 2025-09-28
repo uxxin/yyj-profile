@@ -1,5 +1,5 @@
 const Navbar = () => {
-  const sections = ["home", "aboutme", "projects", "skills", "contact"];
+  const sections = ["home", "projects", "skills", "contact"];
 
   return (
     <nav
