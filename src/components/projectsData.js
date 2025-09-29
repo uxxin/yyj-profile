@@ -7,7 +7,7 @@ const projectsData = [
     id: 1,
     title: "Checkmo",
     duration: "2025.06 ~ 2025.08",
-    description: "간단한 한 줄 설명",
+    description: "오프라인 독서모임을 위한 서비스",
     details:
       "Checkmo 프로젝트에 대한 상세 설명. 어떤 기술을 사용했는지, 역할, 성과 등을 작성",
     img: checkmoImg,
