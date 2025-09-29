@@ -1,3 +1,6 @@
+/* Projects.css */
+
+/* --- 섹션 기본 스타일 --- */
 .projects-section {
   padding: 5rem 2rem;
   background-color: #f9fafb;
@@ -7,8 +10,11 @@
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 3rem;
-  text-align: start;
+  text-align: start; /* 왼쪽 정렬 */
   color: #111827;
+  max-width: 900px; /* 콘텐츠와 정렬되도록 너비 설정 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects-grid {
@@ -17,9 +23,10 @@
   gap: 2.5rem;
   max-width: 900px;
   margin: 0 auto;
-  text-align: start;
+  text-align: start; /* 왼쪽 정렬 */
 }
 
+/* --- 가로형 카드 레이아웃 (데스크탑) --- */
 .project-card {
   cursor: pointer;
   background: #ffffff;
@@ -80,21 +87,24 @@
   overflow: hidden;
 }
 
+/* --- 반응형 (모바일) 스타일 --- */
 @media (max-width: 768px) {
+  .projects-title {
+    padding: 0 1rem; /* 모바일에서 좌우 여백 추가 */
+  }
   .project-card {
     flex-direction: column;
     align-items: stretch;
   }
-
   .project-card-image-wrapper {
     width: 100%;
   }
-
   .project-card-content {
     padding: 1.5rem;
   }
 }
 
+/* --- 모달 애니메이션 --- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -115,6 +125,7 @@
   }
 }
 
+/* --- 모달 기본 스타일 --- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -137,6 +148,7 @@
   position: relative;
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
   animation: slideUp 0.4s ease-out;
+  text-align: left;
 }
 
 .modal-close-button {
@@ -164,7 +176,7 @@
 
 .modal-image {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -181,19 +193,63 @@
   margin-bottom: 1.5rem;
 }
 
-.modal-content .details {
+/* --- 모달 상세 설명 스타일 --- */
+.details-container {
   font-size: 1.1rem;
   color: #374151;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  white-space: pre-line;
+}
+
+.details-paragraph {
+  margin-bottom: 1.25rem;
+}
+
+.details-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.details-subtitle.achievement {
+  color: #4f46e5;
+  border-bottom-color: #eef2ff;
+}
+
+.details-list {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.details-list li {
+  margin-bottom: 0.75rem;
+  text-align: start;
+}
+
+.details-list li::marker {
+  color: #a5b4fc;
+}
+
+/* --- 모달 하단부 스타일 --- */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .tech-icons-container {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin: 0; /* 기존 margin 초기화 */
 }
 
 .tech-icon {
