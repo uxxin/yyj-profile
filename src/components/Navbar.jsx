@@ -3,6 +3,13 @@ import React from "react";
 const Navbar = () => {
   const sections = ["home", "projects", "skills", "contact"];
 
+  const handleClick = (sec, e) => {
+    if (sec === "home") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       style={{
@@ -35,7 +42,8 @@ const Navbar = () => {
           {sections.map((sec) => (
             <li key={sec}>
               <a
-                href={`#${sec}`}
+                href={sec === "home" ? "#" : `#${sec}`}
+                onClick={(e) => handleClick(sec, e)}
                 style={{
                   textDecoration: "none",
                   color: "#333",

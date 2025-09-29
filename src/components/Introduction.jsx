@@ -1,11 +1,11 @@
 import profileImage from "../assets/images/profile.webp";
+import contactsData from "./contactData";
 import "./Introduction.css";
 
 const Introduction = () => {
   return (
     <section id="home" className="introduction-section">
       <div className="introduction-text">
-        {/* <p className="intro-role">Developer & UI/UX Designer</p> */}
         <h1>
           <span className="highlight">
             하나의 질문에서
@@ -26,14 +26,24 @@ const Introduction = () => {
           사용자에게 서비스가 닿기까지의 전 과정을 아우르는 개발자가 되고자
           <br />
           디자인부터 프론트엔드, 백엔드까지 경험하며 시야를 넓혀가고 있습니다.
-          {/* <br />
-          <br />
-          단순히 기능을 완성하는 데 그치지 않고 기술의 근본 원리를 파고드는 이
-          성향이야말로, 더 넓은 시야로 문제를 해결하는 가장 확실한 방법이라
-          믿습니다. */}
         </p>
       </div>
-      <img src={profileImage} alt="profile" className="introduction-image" />
+      <div className="introduction-image-container">
+        <img src={profileImage} alt="profile" className="introduction-image" />
+        <div className="intro-contact-icons">
+          {contactsData.map((contact) => (
+            <a
+              key={contact.link}
+              href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={contact.text}
+            >
+              <img src={contact.icon} alt={contact.text} />
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
