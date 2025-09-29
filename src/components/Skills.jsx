@@ -5,6 +5,7 @@ import {
   SiJavascript,
   SiTailwindcss,
   SiCplusplus,
+  SiSpringboot, // 1. Spring Boot 아이콘을 import 합니다.
 } from "react-icons/si";
 import "./Skills.css";
 
@@ -25,6 +26,11 @@ const Skills = () => {
         { name: "React", icon: <FaReact color="#61DAFB" /> },
         { name: "TailwindCSS", icon: <SiTailwindcss color="#06B6D4" /> },
       ],
+    },
+    // 2. 아래 "Backend" 블록을 새로 추가합니다.
+    {
+      title: "Backend",
+      items: [{ name: "Spring Boot", icon: <SiSpringboot color="#6DB33F" /> }],
     },
     {
       title: "Design",

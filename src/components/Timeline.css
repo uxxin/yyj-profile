@@ -8,6 +8,7 @@
 .timeline-title {
   text-align: center;
   font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 2rem;
 }
 
@@ -22,7 +23,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #e0e0e0;
+  background: #ffffff;
   border-radius: 2px;
 }
 

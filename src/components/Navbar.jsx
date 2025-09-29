@@ -1,3 +1,5 @@
+import React from "react";
+
 const Navbar = () => {
   const sections = ["home", "projects", "skills", "contact"];
 
@@ -6,38 +8,46 @@ const Navbar = () => {
       style={{
         position: "fixed",
         top: 0,
-        width: "100%",
+        left: 0,
+        right: 0,
         background: "#fff",
         zIndex: 10,
-        padding: "1rem 2rem",
         boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        boxSizing: "border-box",
       }}
     >
-      <ul
+      <div
         style={{
-          display: "flex",
-          gap: "2rem",
-          margin: 0,
-          padding: 0,
-          listStyle: "none",
+          maxWidth: "1280px",
+          margin: "0 auto",
+          padding: "1rem 2rem",
+          boxSizing: "border-box",
         }}
       >
-        {sections.map((sec) => (
-          <li key={sec}>
-            <a
-              href={`#${sec}`}
-              style={{
-                textDecoration: "none",
-                color: "#333",
-                fontWeight: "bold",
-              }}
-            >
-              {sec.charAt(0).toUpperCase() + sec.slice(1)}
-            </a>
-          </li>
-        ))}
-      </ul>
+        <ul
+          style={{
+            display: "flex",
+            gap: "3rem",
+            margin: 0,
+            padding: 0,
+            listStyle: "none",
+          }}
+        >
+          {sections.map((sec) => (
+            <li key={sec}>
+              <a
+                href={`#${sec}`}
+                style={{
+                  textDecoration: "none",
+                  color: "#333",
+                  fontWeight: "bold",
+                }}
+              >
+                {sec.charAt(0).toUpperCase() + sec.slice(1)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };

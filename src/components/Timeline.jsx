@@ -10,7 +10,7 @@ const Timeline = () => {
     { date: "2023.9~2024.2", content: "UMC 5th Design 파트" },
     { date: "2024.3~2024.8", content: "UMC 6th Web 파트" },
     { date: "2025.3~2025.8", content: "UMC 8th Web 파트" },
-    { date: "2025.7.~", content: "우리 FISA 클라우드 서비스 개발" },
+    { date: "2025.7.~", content: "우리 FISA 클라우드 서비스 백엔드 개발" },
   ];
 
   return (

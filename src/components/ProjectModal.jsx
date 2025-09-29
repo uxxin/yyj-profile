@@ -10,7 +10,19 @@ const ProjectModal = ({ project, onClose }) => {
 
   if (!project) return null;
 
-  // details 문자열을 파싱하여 JSX로 변환하는 함수
+  // 헬퍼 함수: 문자열 내부의 **...** 부분을 <strong> 태그로 변환
+  const parseInlineBold = (text) => {
+    if (!text) return null;
+    const parts = text.split(/(\*\*.*?\*\*)/g).filter(Boolean);
+    return parts.map((part, i) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={i}>{part.substring(2, part.length - 2)}</strong>
+      ) : (
+        <React.Fragment key={i}>{part}</React.Fragment>
+      )
+    );
+  };
+
   const renderDetails = () => {
     if (!project.details || typeof project.details !== "string") {
       return null;
@@ -51,18 +63,34 @@ const ProjectModal = ({ project, onClose }) => {
         );
       } else if (trimmedLine.startsWith("- ")) {
         const content = trimmedLine.substring(2);
-        listItems.push(<li key={index}>{content}</li>);
+        const match = content.match(/^\*\*(.*?):\*\*(.*)/);
+
+        if (match) {
+          const title = match[1];
+          const description = match[2];
+          listItems.push(
+            <li key={index}>
+              <strong>{title}:</strong>
+              {/* 설명 부분에도 헬퍼 함수 적용 */}
+              {parseInlineBold(description)}
+            </li>
+          );
+        } else {
+          // 일반 리스트 항목에도 헬퍼 함수 적용
+          listItems.push(<li key={index}>{parseInlineBold(content)}</li>);
+        }
       } else if (trimmedLine) {
         flushList();
+        // 일반 문단에도 헬퍼 함수 적용
         elements.push(
           <p key={index} className="details-paragraph">
-            {trimmedLine}
+            {parseInlineBold(trimmedLine)}
           </p>
         );
       }
     });
 
-    flushList(); // 마지막에 남은 리스트 아이템 처리
+    flushList();
     return elements;
   };
 
@@ -88,12 +116,12 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
 
           <a
-            href={project.github}
+            href={project.link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link"
+            className="project-link"
           >
-            GitHub 바로가기
+            {project.link.text}
           </a>
         </div>
       </div>

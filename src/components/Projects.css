@@ -4,10 +4,10 @@
 }
 
 .projects-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 3rem;
-  text-align: start;
+  text-align: center;
   color: #111827;
   max-width: 900px;
   margin-left: auto;
@@ -83,7 +83,6 @@
   overflow: hidden;
 }
 
-/* --- 반응형 (모바일) 스타일 --- */
 @media (max-width: 768px) {
   .projects-title {
     padding: 0 1rem;
@@ -187,7 +186,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* --- 모달 상세 설명 스타일 --- */
 .details-container {
   font-size: 1.1rem;
   color: #374151;
@@ -229,7 +227,6 @@
   color: #a5b4fc;
 }
 
-/* --- 모달 하단부 스타일 --- */
 .modal-footer {
   display: flex;
   justify-content: space-between;
@@ -255,7 +252,7 @@
   font-weight: 500;
 }
 
-.github-link {
+.project-link {
   display: inline-block;
   background: #1f2937;
   color: #fff;
@@ -266,7 +263,7 @@
   transition: background-color 0.2s, transform 0.2s;
 }
 
-.github-link:hover {
+.project-link:hover {
   background: #374151;
   transform: scale(1.03);
 }

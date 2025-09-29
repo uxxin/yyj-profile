@@ -1,12 +1,10 @@
-/* Skills.css */
-
 .skills-section {
   padding: 5rem 2rem;
   background-color: #f9fafb;
 }
 
 .skills-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 3rem;
   text-align: center;
@@ -14,11 +12,10 @@
 }
 
 .skills-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -26,9 +23,8 @@
   background-color: #ffffff;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05); /* 입체감을 주는 그림자 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.05);
   text-align: center;
-  flex-basis: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
