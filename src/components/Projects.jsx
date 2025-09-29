@@ -20,9 +20,22 @@ const Projects = () => {
               <img src={p.img} alt={p.title} className="project-card-image" />
             </div>
             <div className="project-card-content">
-              <h3>{p.title}</h3>
-              <p className="duration">{p.duration}</p>
-              <p className="description">{p.description}</p>
+              {/* 상단 텍스트 영역을 div로 한번 감싸줍니다. */}
+              <div>
+                <h3>{p.title}</h3>
+                <p className="duration">{p.duration}</p>
+                <p className="description">{p.description}</p>
+              </div>
+
+              {/* ▼▼▼▼▼ 이 부분이 새로 추가되었습니다! ▼▼▼▼▼ */}
+              <div className="project-card-icons">
+                {p.icons.map((icon) => (
+                  <span key={icon} className="project-card-icon">
+                    {icon}
+                  </span>
+                ))}
+              </div>
+              {/* ▲▲▲▲▲ 여기까지 추가 ▲▲▲▲▲ */}
             </div>
           </div>
         ))}

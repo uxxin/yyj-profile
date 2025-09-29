@@ -1,4 +1,5 @@
 import React from "react";
+import { FaUsers, FaChartPie } from "react-icons/fa";
 import "./Projects.css";
 
 const ProjectModal = ({ project, onClose }) => {
@@ -10,7 +11,6 @@ const ProjectModal = ({ project, onClose }) => {
 
   if (!project) return null;
 
-  // 헬퍼 함수: 문자열 내부의 **...** 부분을 <strong> 태그로 변환
   const parseInlineBold = (text) => {
     if (!text) return null;
     const parts = text.split(/(\*\*.*?\*\*)/g).filter(Boolean);
@@ -71,17 +71,14 @@ const ProjectModal = ({ project, onClose }) => {
           listItems.push(
             <li key={index}>
               <strong>{title}:</strong>
-              {/* 설명 부분에도 헬퍼 함수 적용 */}
               {parseInlineBold(description)}
             </li>
           );
         } else {
-          // 일반 리스트 항목에도 헬퍼 함수 적용
           listItems.push(<li key={index}>{parseInlineBold(content)}</li>);
         }
       } else if (trimmedLine) {
         flushList();
-        // 일반 문단에도 헬퍼 함수 적용
         elements.push(
           <p key={index} className="details-paragraph">
             {parseInlineBold(trimmedLine)}
@@ -104,9 +101,7 @@ const ProjectModal = ({ project, onClose }) => {
         <h3>{project.title}</h3>
         <p className="duration">{project.duration}</p>
 
-        <div className="details-container">{renderDetails()}</div>
-
-        <div className="modal-footer">
+        <div className="modal-metadata">
           <div className="tech-icons-container">
             {project.icons.map((icon) => (
               <span key={icon} className="tech-icon">
@@ -114,7 +109,25 @@ const ProjectModal = ({ project, onClose }) => {
               </span>
             ))}
           </div>
+          <div className="project-info">
+            {project.teamSize && (
+              <span className="info-item">
+                <FaUsers />
+                <strong>인원:</strong> {project.teamSize}명
+              </span>
+            )}
+            {project.contribution && (
+              <span className="info-item">
+                <FaChartPie />
+                <strong>기여도:</strong> {project.contribution}
+              </span>
+            )}
+          </div>
+        </div>
 
+        <div className="details-container">{renderDetails()}</div>
+
+        <div className="modal-footer">
           <a
             href={project.link.url}
             target="_blank"
