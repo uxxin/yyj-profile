@@ -2,7 +2,6 @@ import checkmoImg from "../assets/images/checkmo.webp";
 import readmeImg from "../assets/images/readme!.webp";
 import umcImg from "../assets/images/umcnetworking.webp";
 import graduateImg from "../assets/images/graduate.png";
-// import aiImg from "../assets/images/ai_project.webp";
 
 const projectsData = [
   {
