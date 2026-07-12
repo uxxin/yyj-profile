@@ -1,6 +1,7 @@
 import checkmoImg from "../assets/images/checkmo1.png";
 import readmeImg from "../assets/images/readme!.webp";
 import umcImg from "../assets/images/umcnetworking.webp";
+import graphqlImg from "../assets/images/graphQL.png";
 import graduateImg from "../assets/images/graduate.png";
 import knowhowImg from "../assets/images/knowhow.png";
 
@@ -145,7 +146,7 @@ Discord, Slack 등 여러 채널에 흩어진 공지를 한 번에 취합하고,
 - **선언적 데이터 페칭의 이해:** 클라이언트가 필요한 데이터의 구조를 직접 정의하고 요청할 수 있는 GraphQL의 특징을 구현하며, 네트워크 통신 비효율을 개선하는 원리를 체득했습니다.
 - **GraphQL 생태계 및 주요 개념 습득:** Schema Definition Language(SDL), Resolver, N+1 문제 등 GraphQL 서버 개발에 필요한 핵심 개념과 기술 스택(Spring for GraphQL, JPA 등)에 대한 이해도를 높였습니다.
 `,
-    img: null,
+    img: graphqlImg,
     icons: ["Java", "Spring Boot", "GraphQL", "JPA", "MySQL", "WebSocket"],
     teamSize: 1,
     contribution: "1인 프로젝트 (100%)",
