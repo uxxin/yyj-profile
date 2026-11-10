@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-accent: #315b7d;
+  --color-text: #27313b;
+  --color-muted: #667085;
+  --color-surface: #f4f7fa;
+  --color-card: #ffffff;
+  --color-tag: #eaf1f6;
+  --color-border: #dbe4ec;
+}

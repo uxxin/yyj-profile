@@ -117,7 +117,7 @@ const ProjectModal = ({ project, onClose }) => {
               </span>
             )}
             {project.contribution && (
-              <span className="info-item">
+              <span className="info-item contribution-item">
                 <FaChartPie />
                 <strong>기여도:</strong> {project.contribution}
               </span>

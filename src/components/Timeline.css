@@ -37,7 +37,7 @@
 .timeline-marker {
   width: 16px;
   height: 16px;
-  background: #6366f1;
+  background: var(--color-accent);
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
@@ -52,12 +52,12 @@
 .timeline-date {
   font-weight: bold;
   text-align: start;
-  color: #6366f1;
+  color: var(--color-accent);
   margin-bottom: 0.3rem;
 }
 
 .timeline-text {
   line-height: 1.6;
   font-size: 1rem;
-  color: #333;
+  color: var(--color-text);
 }
