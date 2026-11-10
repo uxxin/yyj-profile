@@ -37,7 +37,7 @@
 .timeline-marker {
   width: 16px;
   height: 16px;
-  background: #4caf50;
+  background: #6366f1;
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
@@ -52,7 +52,7 @@
 .timeline-date {
   font-weight: bold;
   text-align: start;
-  color: #4caf50;
+  color: #6366f1;
   margin-bottom: 0.3rem;
 }
 

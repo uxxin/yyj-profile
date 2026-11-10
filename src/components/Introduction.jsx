@@ -1,4 +1,4 @@
-import profileImage from "../assets/images/profile.webp";
+import profileImage from "../assets/images/profile.jpg";
 import contactsData from "./contactData";
 import "./Introduction.css";
 
